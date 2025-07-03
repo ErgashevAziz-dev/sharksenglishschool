@@ -1,1 +1,1 @@
-web: gunicorn sharksenglishschool.wsgi:application
+web: gunicorn sharks.wsgi:application
