@@ -24,8 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c7ghjojk_@4soqbyyk1af#^j13rlxk$bggwum+#5)cxf(6z&rq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['.onrender.com']
-DEBUG = False
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -119,14 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -135,9 +138,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ergashevazizdev@gmail.com'
 EMAIL_HOST_PASSWORD = 'sfjb ermm nikh ltjy'
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
